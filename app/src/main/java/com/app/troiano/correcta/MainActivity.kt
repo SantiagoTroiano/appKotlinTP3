@@ -21,6 +21,14 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.app.troiano.correcta.ui.theme.components.BotonPrincipalApp
+import com.app.troiano.correcta.ui.theme.components.TituloPrincipal
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.stringResource
+import com.app.troiano.correcta.R
+import com.app.troiano.correcta.ui.theme.components.SubtituloApp
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,30 +79,33 @@ fun WelcomeScreen(primary: Color, onLogin: () -> Unit, onRegister: () -> Unit) {
                 modifier = Modifier.size(180.dp)
             )
             Spacer(Modifier.height(24.dp))
-            Text("Discover Your", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = primary)
-            Text("Dream Job here", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = primary)
+            //Text("Discover Your", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = primary)
+            TituloPrincipal(R.string.welcome_title_discover, color = primary)
+            //Text("Dream Job here", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = primary)
+            TituloPrincipal(R.string.welcome_title_dream_job, color = primary)
             Spacer(Modifier.height(12.dp))
-            Text(
-                "Explore all the existing job roles based on your interest and study major",
-                textAlign = TextAlign.Center,
-                fontSize = 14.sp,
-                color = Color(0xFF333333)
-            )
+            SubtituloApp(R.string.welcome_subtitle, color = Color(0xFF333333))
+//            Text(
+//                "Explore all the existing job roles based on your interest and study major",
+//                textAlign = TextAlign.Center,
+//                fontSize = 14.sp,
+//                color = Color(0xFF333333)
+//            )
             Spacer(Modifier.height(24.dp))
             Row(Modifier.fillMaxWidth()) {
-                Button(
+                BotonPrincipalApp(
+                    texto = "Login",
                     onClick = onLogin,
-                    modifier = Modifier.weight(1f).height(48.dp),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = primary)
-                ) { Text("Login") }
+                    modifier = Modifier.weight(1f), // Aplicamos el weight aquí
+                    colorFondo = primary
+                )
                 Spacer(Modifier.width(16.dp))
-                Button(
+                BotonPrincipalApp(
+                    texto = "Register",
                     onClick = onRegister,
-                    modifier = Modifier.weight(1f).height(48.dp),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = primary)
-                ) { Text("Register") }
+                    modifier = Modifier.weight(1f), // Aplicamos el weight aquí
+                    colorFondo = primary
+                )
             }
         }
     }

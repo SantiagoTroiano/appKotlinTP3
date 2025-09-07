@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Troiano Correcta</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_title_discover">Descubre tu</string>
+    <string name="welcome_title_dream_job">Trabajo soñado aquí</string>
+    <string name="welcome_subtitle">Explorá todos los puestos disponibles según tus intereses
+        y tu carrera
+    </string>
+    <string name="welcome_login_button">Iniciar sesión</string>
+    <string name="welcome_register_button">Registrarse</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Iniciá sesión</string>
+    <string name="login_subtitle">¡Bienvenido de nuevo, te extrañamos!</string>
+    <string name="login_email_label">Correo electrónico</string>
+    <string name="login_password_label">Contraseña</string>
+    <string name="login_forgot_password_button">¿Olvidaste tu contraseña?</string>
+    <string name="login_signin_button">Entrar</string>
+    <string name="login_back_button">Atrás</string>
+
+    <!-- Register Screen -->
+    <string name="register_title">Crear cuenta</string>
+    <string name="register_subtitle">Creá una cuenta para explorar todas las
+        oportunidades disponibles
+    </string>
+    <string name="register_confirm_password_label">Confirmar contraseña</string>
+    <string name="register_signup_button">Registrarse</string>
+</resources>
