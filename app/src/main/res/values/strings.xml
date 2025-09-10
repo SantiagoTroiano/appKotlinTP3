@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">App Troiano Correcta</string>
+
+        <!-- Welcome Screen -->
+        <string name="welcome_title_discover">Discover Your</string>
+        <string name="welcome_title_dream_job">Dream Job here</string>
+        <string name="welcome_subtitle">Explore all the existing job roles based on your interest
+            and study major
+        </string>
+        <string name="welcome_login_button">Login</string>
+        <string name="welcome_register_button">Register</string>
+
+        <!-- Login Screen -->
+        <string name="login_title">Login here</string>
+        <string name="login_subtitle">Welcome back, you have been missed!</string>
+        <string name="login_email_label">Email</string>
+        <string name="login_password_label">Password</string>
+        <string name="login_forgot_password_button">Forgot your password?</string>
+        <string name="login_signin_button">Sign in</string>
+        <string name="login_back_button">Back</string>
+
+        <!-- Register Screen -->
+        <string name="register_title">Create Account</string>
+        <string name="register_subtitle">Create an account so you can explore all the existing
+            jobs
+        </string>
+        <string name="register_confirm_password_label">Confirm Password</string>
+        <string name="register_signup_button">Sign up</string>
+
+        <!-- <string name="app_name">AppTroianoCorrecta</string> -->
 </resources>
