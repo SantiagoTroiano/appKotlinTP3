@@ -28,6 +28,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.app.troiano.correcta.R
 import com.app.troiano.correcta.ui.theme.components.SubtituloApp
+import com.app.troiano.correcta.ui.theme.components.TextoLocalizado
 
 
 class MainActivity : ComponentActivity() {
@@ -122,9 +123,11 @@ fun LoginScreen(primary: Color, onBack: () -> Unit) {
             Modifier.fillMaxSize().padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text("Login here", fontSize = 24.sp, fontWeight = FontWeight.Bold, color = primary)
+            TituloPrincipal(R.string.login_title, color = primary)
+            /*Text("Login here", fontSize = 24.sp, fontWeight = FontWeight.Bold, color = primary)*/
             Spacer(Modifier.height(8.dp))
-            Text("Welcome back, you have been missed!", textAlign = TextAlign.Center)
+            TextoLocalizado(R.string.login_subtitle)
+            /*Text("Welcome back, you have been missed!", textAlign = TextAlign.Center)*/
             Spacer(Modifier.height(16.dp))
             OutlinedTextField(
                 value = email, onValueChange = { email = it },
@@ -141,12 +144,13 @@ fun LoginScreen(primary: Color, onBack: () -> Unit) {
             Spacer(Modifier.height(8.dp))
             TextButton(onClick = { }) { Text("Forgot your password?") }
             Spacer(Modifier.height(8.dp))
-            Button(
-                onClick = { /* login */ },
+            BotonPrincipalApp(texto = "Sign in", onClick = { /* login */ }, modifier = Modifier.fillMaxWidth(), colorFondo = primary)
+           /* Button(
+                onClick = { *//* login *//* },
                 modifier = Modifier.fillMaxWidth().height(48.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = primary)
-            ) { Text("Sign in") }
+            ) { Text("Sign in") }*/
             Spacer(Modifier.height(8.dp))
             TextButton(onClick = onBack) { Text("Back") }
         }
@@ -165,9 +169,11 @@ fun RegisterScreen(primary: Color, onBack: () -> Unit) {
             Modifier.fillMaxSize().padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text("Create Account", fontSize = 24.sp, fontWeight = FontWeight.Bold, color = primary)
+            TituloPrincipal(R.string.register_title, color = primary)
+            /*Text("Create Account", fontSize = 24.sp, fontWeight = FontWeight.Bold, color = primary)*/
             Spacer(Modifier.height(8.dp))
-            Text("Create an account so you can explore all the existing jobs", textAlign = TextAlign.Center)
+            TextoLocalizado(R.string.register_subtitle)
+            /*Text("Create an account so you can explore all the existing jobs", textAlign = TextAlign.Center)*/
             Spacer(Modifier.height(16.dp))
             OutlinedTextField(
                 value = email, onValueChange = { email = it },
@@ -189,12 +195,13 @@ fun RegisterScreen(primary: Color, onBack: () -> Unit) {
                 modifier = Modifier.fillMaxWidth()
             )
             Spacer(Modifier.height(12.dp))
-            Button(
-                onClick = { /* registro */ },
+            BotonPrincipalApp(texto = "Sign up", onClick = { /* registro */ }, modifier = Modifier.fillMaxWidth(), colorFondo = primary)
+            /*Button(
+                onClick = { *//* registro *//* },
                 modifier = Modifier.fillMaxWidth().height(48.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = primary)
-            ) { Text("Sign up") }
+            ) { Text("Sign up") }*/
             Spacer(Modifier.height(8.dp))
             TextButton(onClick = onBack) { Text("Back") }
         }
